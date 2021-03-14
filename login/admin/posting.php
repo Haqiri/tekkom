@@ -92,22 +92,22 @@
                                         </div>
 
                                         <div class="upload-img">
-                                            <input type="file" name="foto" class="form-control mt-2 mb-2">
+                                            <input required type="file" name="foto" class="form-control mt-2 mb-2">
                                         </div>
                                         <div class="form-group">
                                             <label for="judul">Judul</label>
-                                            <input type="text" class="form-control" id="judul"
+                                            <input required type="text" class="form-control" id="judul"
                                                 placeholder="Masukkan Judul" name="judul">
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-md-6">
                                                 <label for="author">Author</label>
-                                                <input type="text" class="form-control" id="author"
+                                                <input required type="text" class="form-control" id="author"
                                                     placeholder="Nama Pemosting" name="author">
                                             </div>
                                             <div class="col-md-6">
                                                 <label for="tgl">Tanggal Post</label>
-                                                <input type="date" class="form-control " id="tgl"
+                                                <input required type="date" class="form-control " id="tgl"
                                                     placeholder="Tanggal Post" name="tgl">
                                             </div>
                                         </div>
@@ -118,7 +118,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="ktg">Kategori</label>
-                                            <select name="ktg" id="ktg" class="form-control">
+                                            <select name="ktg" id="ktg" class="form-control" required>
                                                 <option value="">Pilih Kategori Post</option>
                                                 <option value="Berita">Berita</option>
                                                 <option value="Acara">Acara</option>
@@ -194,15 +194,15 @@
 
                             <div class="form-group">
                                 <input type="file" name="foto" class="form-control mt-2">
-                                <input type="hidden" name="foto_lama" value="<?php echo $p['foto']; ?>">
+                                <input required type="hidden" name="foto_lama" value="<?php echo $p['foto']; ?>">
                             </div>
 
-                            <input type="hidden" class="form-control" id="id" name="id_posting"
+                            <input required type="hidden" class="form-control" id="id" name="id_posting"
                                 value="<?php echo $p['id']; ?>">
 
                             <div class="form-group">
                                 <label for="judul">Judul</label>
-                                <input type="text" class="form-control" id="judul" placeholder="Masukkan Judul"
+                                <input required type="text" class="form-control" id="judul" placeholder="Masukkan Judul"
                                     name="judul" value="<?= $p['judul'] ?>">
                             </div>
                             <div class="form-group">
@@ -212,17 +212,17 @@
                             </div>
                             <div class="form-group">
                                 <label for="tgl">Tanggal Post</label>
-                                <input type="date" class="form-control" id="tgl" placeholder="Tanggal" name="tgl"
-                                    value="<?= $p['tgl'] ?>">
+                                <input required type="date" class="form-control" id="tgl" placeholder="Tanggal"
+                                    name="tgl" value="<?= $p['tgl'] ?>">
                             </div>
                             <div class="form-group">
                                 <label for="author">Author</label>
-                                <input name="author" type="text" class="form-control" id="author"
+                                <input required name="author" type="text" class="form-control" id="author"
                                     placeholder="Nama Author" value="<?= $p['author'] ?>">
                             </div>
                             <div class="form-group">
                                 <label for="ktg">Kategori</label>
-                                <select name="ktg" id="ktgn" class="form-control">
+                                <select name="ktg" id="ktgn" class="form-control" required>
                                     <option value="">Pilih Kategori Post</option>
                                     <option value="Berita" <?php if($p['ktg'] == 'Berita'){ echo "selected"; } ?>>Berita
                                     </option>

@@ -91,33 +91,33 @@
                                             <img src="../../assets/images/contoh/avatar.png" alt="Foto Post"
                                                 class="img-fluid">
                                         </div>
-                                        <input type="file" name="foto" class="form-control mt-2">
+                                        <input required type="file" name="foto" class="form-control mt-2">
                                     </div>
                                     <div class="form-group">
                                         <label for="nama">Nama</label>
-                                        <input type="text" class="form-control" id="nama"
+                                        <input required type="text" class="form-control" id="nama"
                                             placeholder="Masukkan Nama Admin" name="nama">
                                     </div>
                                     <div class="form-group">
                                         <label for="username">Username</label>
-                                        <input type="text" class="form-control" id="username"
+                                        <input required type="text" class="form-control" id="username"
                                             placeholder="Masukkan Username" name="username">
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-md-6">
                                             <label for="password">Password</label>
-                                            <input name="password" type="password" class="form-control" id="password"
-                                                placeholder="Password">
+                                            <input required name="password" type="password" class="form-control"
+                                                id="password" placeholder="Password">
                                         </div>
                                         <div class="col-md-6">
                                             <label for="ulangi_password">Ulangi Password</label>
-                                            <input name="ulangi_password" type="password" class="form-control"
+                                            <input required name="ulangi_password" type="password" class="form-control"
                                                 id="ulangi_password" placeholder="Ulangi Password">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="level">Jenis Admin</label>
-                                        <select name="level" id="level" class="form-control">
+                                        <select name="level" id="level" class="form-control" required>
                                             <option value="">Pilih Level Admin</option>
                                             <option value="Super Admin">Super Admin</option>
                                             <option value="Admin">Admin</option>
@@ -198,18 +198,18 @@
                                         value="<?php echo $p['id']; ?>">
                                     <div class="form-group">
                                         <label for="nama">Nama</label>
-                                        <input type="text" class="form-control" id="nama"
+                                        <input required type="text" class="form-control" id="nama"
                                             placeholder="Masukkan Nama Admin" name="nama" value="<?= $p['nama'] ?>">
                                     </div>
                                     <div class="form-group">
                                         <label for="username">Username</label>
-                                        <input type="text" class="form-control" id="username"
+                                        <input required type="text" class="form-control" id="username"
                                             placeholder="Masukkan Username Admin" name="username"
                                             value="<?= $p['username'] ?>">
                                     </div>
                                     <div class="form-group">
                                         <label for="level">Level Admin</label>
-                                        <select name="level" id="level" class="form-control">
+                                        <select name="level" id="level" class="form-control" required>
                                             <option value="">Pilih Level Admin</option>
                                             <option value="Super Admin"
                                                 <?php if($p['level'] == 'Super Admin'){ echo "selected"; } ?>>Super
@@ -242,16 +242,16 @@
                             <div class="modal-body">
                                 <form class="user" action="adminpws_control.php" method="POST"
                                     enctype="multipart/form-data">
-                                    <input type="hidden" class="form-control" id="id" name="id_admin"
+                                    <input required type="hidden" class="form-control" id="id" name="id_admin"
                                         value="<?php echo $p['id']; ?>">
                                     <div class="form-group">
                                         <label for="password_baru">Password Baru</label>
-                                        <input type="password" class="form-control" id="password_baru"
+                                        <input required type="password" class="form-control" id="password_baru"
                                             placeholder="Masukkan Password Baru Admin" name="password_baru">
                                     </div>
                                     <div class="form-group">
                                         <label for="ulangi_password_baru">Ulangi Password Baru</label>
-                                        <input type="password" class="form-control" id="ulangi_password_baru"
+                                        <input required type="password" class="form-control" id="ulangi_password_baru"
                                             placeholder="Masukkan Password Baru Admin" name="ulang_password_baru">
                                     </div>
                             </div>
@@ -316,23 +316,24 @@
                                         <div class="show-gambar text-center">
                                             <img src="<?= $foto ?>" alt="Foto Admin" class="img-fluid">
                                         </div>
-                                        <input type="file" name="foto" class="form-control mt-2">
-                                        <input type="hidden" name="foto_lama" value="<?php echo $da['foto']; ?>">
+                                        <input required type="file" name="foto" class="form-control mt-2">
+                                        <input required type="hidden" name="foto_lama"
+                                            value="<?php echo $da['foto']; ?>">
                                     </div>
-                                    <input type="hidden" class="form-control" id="id" name="id_admin"
+                                    <input required type="hidden" class="form-control" id="id" name="id_admin"
                                         value="<?php echo $da['id']; ?>">
                                     <div class="form-group">
                                         <label for="nama">Nama</label>
-                                        <input type="text" class="form-control" id="nama"
+                                        <input required type="text" class="form-control" id="nama"
                                             placeholder="Masukkan Nama Admin" name="nama" value="<?= $da['nama'] ?>">
                                     </div>
                                     <div class="form-group">
                                         <label for="username">Username</label>
-                                        <input type="text" class="form-control" id="username"
+                                        <input required type="text" class="form-control" id="username"
                                             placeholder="Masukkan Username Admin" name="username"
                                             value="<?= $da['username'] ?>">
                                     </div>
-                                    <input type="hidden" name="level" value="Admin">
+                                    <input required type="hidden" name="level" value="Admin">
                                     <div class="modal-footer">
                                         <button type="submit" name="btn_simpan" value="simpan_profil"
                                             class="btn btn-primary">Simpan</button>
@@ -357,21 +358,21 @@
                             <div class="modal-body">
                                 <form class="user" action="adminpwa_control.php" method="POST"
                                     enctype="multipart/form-data">
-                                    <input type="hidden" class="form-control" id="id" name="id_admin"
+                                    <input required type="hidden" class="form-control" id="id" name="id_admin"
                                         value="<?php echo $da['id']; ?>">
                                     <div class="form-group">
                                         <label for="password_lama">Password Lama</label>
-                                        <input type="password" class="form-control" id="password_lama"
+                                        <input required type="password" class="form-control" id="password_lama"
                                             placeholder="Masukkan Password Lama Admin" name="password_lama">
                                     </div>
                                     <div class="form-group">
                                         <label for="password_baru">Password Baru</label>
-                                        <input type="password" class="form-control" id="password_baru"
+                                        <input required type="password" class="form-control" id="password_baru"
                                             placeholder="Masukkan Password Baru Admin" name="password_baru">
                                     </div>
                                     <div class="form-group">
                                         <label for="ulangi_password_baru">Ulangi Password Baru</label>
-                                        <input type="password" class="form-control" id="ulangi_password_baru"
+                                        <input required type="password" class="form-control" id="ulangi_password_baru"
                                             placeholder="Masukkan Password Baru Admin" name="ulang_password_baru">
                                     </div>
                                     <div class="note">

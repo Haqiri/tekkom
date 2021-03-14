@@ -87,13 +87,13 @@
                                         </div>
 
                                         <div class="upload-img">
-                                            <input type="file" name="foto" class="form-control mt-2 mb-2">
+                                            <input required type="file" name="foto" class="form-control mt-2 mb-2">
                                             <p><span class="note" style="font-style: italic;">Note : </span><strong>
                                                     Gambar Harus Berukuran 1872px x 864px </strong></p>
                                         </div>
                                         <div class="form-group">
                                             <label for="judul">Judul</label>
-                                            <input type="text" class="form-control" id="judul"
+                                            <input required type="text" class="form-control" id="judul"
                                                 placeholder="Masukkan Judul" name="judul">
                                         </div>
                                         <div class="form-group">
@@ -165,17 +165,17 @@
                                     <img src="<?= $foto ?>" alt="Foto Post" class="img-fluid">
                                 </div>
                                 <input type="file" name="foto" class="form-control mt-2">
-                                <input type="hidden" name="foto_lama" value="<?php echo $p['foto']; ?>">
+                                <input required type="hidden" name="foto_lama" value="<?php echo $p['foto']; ?>">
                                 <p><span style="font-style: italic;">Note : </span><strong> Gambar Harus Berukuran
                                         1872px x 864px </strong></p>
                             </div>
 
-                            <input type="hidden" class="form-control" id="id" name="id_slider"
+                            <input required type="hidden" class="form-control" id="id" name="id_slider"
                                 value="<?php echo $p['id']; ?>">
 
                             <div class="form-group">
                                 <label for="judul">Judul</label>
-                                <input type="text" class="form-control" id="judul" placeholder="Masukkan Judul"
+                                <input required type="text" class="form-control" id="judul" placeholder="Masukkan Judul"
                                     name="judul" value="<?php echo $p['judul']; ?>">
                             </div>
                             <div class="form-group">

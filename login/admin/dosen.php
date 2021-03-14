@@ -93,31 +93,31 @@
                                                 class="img-fluid">
                                         </div>
 
-                                        <input type="file" name="foto" class="form-control mt-2">
+                                        <input required type="file" name="foto" class="form-control mt-2">
                                     </div>
                                     <div class="form-group">
                                         <label for="nip">NIP</label>
-                                        <input type="text" class="form-control" id="nip"
+                                        <input required type="text" class="form-control" id="nip"
                                             placeholder="Masukkan NIP Dosen" name="nip">
                                     </div>
                                     <div class="form-group">
                                         <label for="nama">Nama Dosen</label>
-                                        <input type="text" class="form-control" id="nama"
+                                        <input required type="text" class="form-control" id="nama"
                                             placeholder="Masukkan Nama Dosen" name="nama">
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-md-6">
                                             <label>Jenis Kelamin</label>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="jenis_kelamin"
-                                                    id="lk" value="Laki - Laki">
+                                                <input required class="form-check-input required" type="radio"
+                                                    name="jenis_kelamin" id="lk" value="Laki - Laki">
                                                 <label class="form-check-label" for="lk">
                                                     Laki Laki
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="jenis_kelamin"
-                                                    id="pr" value="Perempuan">
+                                                <input required class="form-check-input required" type="radio"
+                                                    name="jenis_kelamin" id="pr" value="Perempuan">
                                                 <label class="form-check-label" for="pr">
                                                     Perempuan
                                                 </label>
@@ -126,13 +126,13 @@
                                         <br>
                                         <div class="col-md-6">
                                             <label for="jabatan">Jabatan</label>
-                                            <input type="text" class="form-control" id="jabatan"
+                                            <input required type="text" class="form-control" id="jabatan"
                                                 placeholder="Masukkan Jabatan Dosen" name="jabatan">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="pendidikan">Pendidikan Tertinggi Dosen</label>
-                                        <select name="pendidikan" id="pendidikan" class="form-control">
+                                        <select name="pendidikan" id="pendidikan" class="form-control" required>
                                             <option value="">Pilih Pendidikan Tertinggi Dosen</option>
                                             <option value="S3">S3</option>
                                             <option value="S2">S2</option>
@@ -142,17 +142,17 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="sk">Status Ikatan Kerja</label>
-                                        <input type="text" class="form-control" id="sk"
+                                        <input required type="text" class="form-control" id="sk"
                                             placeholder="Masukkan Status Ikatan Kerja" name="sk">
                                     </div>
                                     <div class="form-group">
                                         <label for="sa">Status Aktivitas</label>
-                                        <input type="text" class="form-control" id="sa"
+                                        <input required type="text" class="form-control" id="sa"
                                             placeholder="Masukkan Status Aktivitas" name="sa">
                                     </div>
                                     <div class="form-group">
                                         <label for="rp">Riwayat Penelitian</label>
-                                        <input type="text" class="form-control" id="rp"
+                                        <input required type="text" class="form-control" id="rp"
                                             placeholder="Masukkan Riwayat Penelitian" name="rp">
                                     </div>
                                     <hr>
@@ -220,18 +220,19 @@
                                             <img src="<?= $foto ?>" alt="Foto Post" class="img-fluid">
                                         </div>
                                         <input type="file" name="foto" class="form-control mt-2">
-                                        <input type="hidden" name="foto_lama" value="<?php echo $p['foto']; ?>">
+                                        <input required type="hidden" name="foto_lama"
+                                            value="<?php echo $p['foto']; ?>">
                                     </div>
-                                    <input type="hidden" class="form-control" id="id" name="id_dosen"
+                                    <input required type="hidden" class="form-control" id="id" name="id_dosen"
                                         value="<?php echo $p['id']; ?>">
                                     <div class="form-group">
                                         <label for="nip">NIP</label>
-                                        <input type="text" class="form-control" id="nip"
+                                        <input required type="text" class="form-control" id="nip"
                                             placeholder="Masukkan NIP Dosen" name="nip" value="<?= $p['nip'] ?>">
                                     </div>
                                     <div class="form-group">
                                         <label for="nama">Nama Dosen</label>
-                                        <input type="text" class="form-control" id="nama"
+                                        <input required type="text" class="form-control" id="nama"
                                             placeholder="Masukkan Nama Dosen" name="nama" value="<?= $p['nama'] ?>">
                                     </div>
                                     <div class="form-group row">
@@ -249,15 +250,15 @@
                         ?>
 
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="jk" id="lk"
-                                                    value="Laki - Laki" <?= $laki ?>>
+                                                <input required class="form-check-input required" type="radio" name="jk"
+                                                    id="lk" value="Laki - Laki" <?= $laki ?>>
                                                 <label class="form-check-label" for="lk">
                                                     Laki Laki
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="jk" id="pr"
-                                                    value="Perempuan" <?= $perempuan ?>>
+                                                <input required class="form-check-input required" type="radio" name="jk"
+                                                    id="pr" value="Perempuan" <?= $perempuan ?>>
                                                 <label class="form-check-label" for="pr">
                                                     Perempuan
                                                 </label>
@@ -266,14 +267,14 @@
                                         <br>
                                         <div class="col-md-6">
                                             <label for="jabatan">Jabatan</label>
-                                            <input type="text" class="form-control" id="jabatan"
+                                            <input required type="text" class="form-control" id="jabatan"
                                                 placeholder="Masukkan Jabatan Dosen" name="jabatan"
                                                 value="<?= $p['jabatan'] ?>">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="pendidikan">Pendidikan Tertinggi Dosen</label>
-                                        <select name="pendidikan" id="pendidikan" class="form-control">
+                                        <select name="pendidikan" id="pendidikan" class="form-control" required>
                                             <option value="">Pilih Pendidikan Tertinggi Dosen</option>
                                             <option value="S3"
                                                 <?php if($p['pendidikan'] == 'S3'){ echo "selected"; } ?>>S3</option>
@@ -287,13 +288,13 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="sk">Status Ikatan Kerja</label>
-                                        <input type="text" class="form-control" id="sk"
+                                        <input required type="text" class="form-control" id="sk"
                                             placeholder="Masukkan Status Ikatan Kerja" name="sk"
                                             value="<?= $p['sk'] ?>">
                                     </div>
                                     <div class="form-group">
                                         <label for="sa">Status Aktivitas</label>
-                                        <input type="text" class="form-control" id="sa"
+                                        <input required type="text" class="form-control" id="sa"
                                             placeholder="Masukkan Status Aktivitas" name="sa" value="<?= $p['sa'] ?>">
                                     </div>
                                     <div class="form-group">
