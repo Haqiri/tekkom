@@ -225,7 +225,8 @@ include 'metatag.php';
                 </div>
                 <div class="row single-news">
                     <?php
-                      $query=mysqli_query($koneksi,"select * from posting order by id desc limit 3");
+                      $kategori = "Berita";  
+                      $query=mysqli_query($koneksi,"select * from posting where ktg = '$kategori' order by id desc limit 3");
                       while($has=mysqli_fetch_row($query))
                       {
                       $isi_berita = substr($has[2],0,250);

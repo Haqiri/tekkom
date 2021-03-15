@@ -28,7 +28,8 @@
             <div class="container">
                 <div class="row single-news">
                     <?php
-                      $query=mysqli_query($koneksi,"select * from posting order by id");
+                      $kategori = "Berita";
+                      $query=mysqli_query($koneksi,"select * from posting where ktg='$kategori' order by id");
                       while($has=mysqli_fetch_row($query))
                       {
                       $isi_berita = substr($has[2],0,250);
